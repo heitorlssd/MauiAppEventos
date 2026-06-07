@@ -4,53 +4,67 @@
              x:Class="MauiAppEventos.Views.CadastroEvento"
              Title="CadastroEvento"
              Shell.NavBarIsVisible="False">
+
+    <ScrollView>
     
-    <VerticalStackLayout Padding="20">
+        <VerticalStackLayout Padding="10"
+                             Spacing="10">
         
-        <Label 
-            Text="Cadastre seu Evento"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            <Label Text="Cadastre seu Evento"
+                   FontFamily="Bahnschrift"
+                   FontAttributes="Bold"
+                   FontSize="50"
+                   HorizontalTextAlignment="Center"
+                   TextColor="{StaticResource Primary}"
+                   Padding="20" />
 
-        <Border>
+            <Border Padding="30"
+                    BackgroundColor="{StaticResource PrimaryDark}"
+                    StrokeShape="15">
 
-            <VerticalStackLayout>
+                <VerticalStackLayout Spacing="20">
             
-                <Label Text="Digite o nome do seu evento"/>
+                    <Label Text="Digite o nome do seu evento:"/>
 
-                <Entry x:Name="txt_nome"/>
+                    <Entry x:Name="txt_nome"/>
 
-                <Label Text="Selecione a data de início do seu evento"/>
+                    <Label Text="Selecione a data de início do seu evento:"/>
 
-                <DatePicker x:Name="dtpck_inicio"
-                            DateSelected="dtpck_inicio_DateSelected"
-                            Format="dd/MM/yyyy"/>
+                    <DatePicker x:Name="dtpck_inicio"
+                                DateSelected="dtpck_inicio_DateSelected"
+                                Format="dd/MM/yyyy"/>
 
-                <Label Text="Selecione a data de término do seu evento"/>
+                    <Label Text="Selecione a data de término do seu evento:"/>
 
-                <DatePicker x:Name="dtpck_termino"
-                            Format="dd/MM/yyyy"/>
+                    <DatePicker x:Name="dtpck_termino"
+                                Format="dd/MM/yyyy"/>
 
-                <Label Text="Digite o número de participantes do seu evento"/>
+                    <Label Text="Digite o número de participantes do seu evento:"/>
 
-                <Entry x:Name="txt_participantes"
-                       Keyboard="Numeric"/>
+                    <Entry x:Name="txt_participantes"
+                           Keyboard="Numeric"/>
 
-                <Label Text="Digite o local em que o evento irá ocorrer"/>
+                    <Label Text="Digite o local em que o evento irá ocorrer:"/>
 
-                <Entry x:Name="txt_local"/>
+                    <Entry x:Name="txt_local"/>
 
-                <Label Text="Digite o preço da entrada por participante"/>
+                    <Label Text="Digite o preço da entrada por participante:"/>
 
-                <Entry x:Name="txt_preco"
-                       Keyboard="Numeric"/>
+                    <Entry x:Name="txt_preco"
+                           Keyboard="Numeric"/>
 
-                <Button Text="Avançar" Clicked="Button_Clicked"/>
+                    <Button Text="Avançar"
+                            TextColor="{StaticResource PrimaryDark}"
+                            Clicked="Button_Clicked"
+                            Margin="10"
+                            BackgroundColor="{StaticResource Primary}"/>
 
-            </VerticalStackLayout>
+                </VerticalStackLayout>
             
-        </Border>
+            </Border>
         
-    </VerticalStackLayout>
+        </VerticalStackLayout>
+        
+    </ScrollView>
     
 </ContentPage>
